@@ -1,0 +1,12 @@
+﻿{
+  "Results": {
+    "output1": {
+      "type": "table",
+      "value": {
+        "ColumnNames": [ "time", "forecast" ],
+        "ColumnTypes": [ "Double", "Double" ],
+        "Values": [ [ "1", "0.034" ] ]
+      }
+    }
+  }
+}

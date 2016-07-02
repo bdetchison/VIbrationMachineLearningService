@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VibrationMachineLearningService", "VibrationMachineLearningService\VibrationMachineLearningService.csproj", "{CFFC07A5-2661-42E3-BA30-883242FCCB8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VibrationMachineLearningService.Tests", "VibrationMachineLearningService.Tests\VibrationMachineLearningService.Tests.csproj", "{D0624172-3264-48F3-A4BD-E3803255039F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CFFC07A5-2661-42E3-BA30-883242FCCB8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFFC07A5-2661-42E3-BA30-883242FCCB8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFFC07A5-2661-42E3-BA30-883242FCCB8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFFC07A5-2661-42E3-BA30-883242FCCB8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0624172-3264-48F3-A4BD-E3803255039F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0624172-3264-48F3-A4BD-E3803255039F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0624172-3264-48F3-A4BD-E3803255039F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0624172-3264-48F3-A4BD-E3803255039F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
