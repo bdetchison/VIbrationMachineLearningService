@@ -126,6 +126,7 @@
     <Compile Include="Areas\AzureMachineLearning\Controllers\ProcessVIbrationDataController.cs" />
     <Compile Include="Areas\AzureMachineLearning\MachineLearningRequest.cs" />
     <Compile Include="Areas\AzureMachineLearning\Models\DataAccess.cs" />
+    <Compile Include="Areas\AzureMachineLearning\Models\MainObj.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -135,7 +136,6 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Areas\AzureMachineLearning\Views\web.config" />
-    <Content Include="Areas\json.json" />
     <None Include="Properties\PublishProfiles\VibrationMachineLearningService.pubxml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

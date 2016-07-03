@@ -13,7 +13,7 @@ namespace VibrationMachineLearningService.Areas.AzureMachineLearning
     public class StringTable
     {
         public string[] ColumnNames { get; set; }
-       // public string[,] Values { get; set; }
+        //public string[,] Values { get; set; }
         public List<List<string>> Values { get; set; }
     }
 
@@ -21,44 +21,19 @@ namespace VibrationMachineLearningService.Areas.AzureMachineLearning
     {
         public static async Task InvokeRequestResponseService(Action<string, double> responseAction, List<double> velocityReadings)
         {
-            //var vals = new string[,] { };
+            var allReadings = new List<List<string>>();
 
-           // var al = new List<string>;
-
-            
-
+            var count = 0;
             foreach (double reading in velocityReadings)
             {
-               
+                var machineLearningReading = new List<string>();
+                machineLearningReading.Add("2014-03-04T09:56:48"); //Keep this as a placeholder because when we change the ML model we will want the date.  but for simple forecasing its not needed.
+                machineLearningReading.Add(count.ToString());
+                machineLearningReading.Add(reading.ToString());
+
+                allReadings.Add(machineLearningReading);
+                count++;
             }
-
-
-            var reading1 = new List<string>();
-
-
-            //"2014-03-04T09:56:48", "0", ".034"
-            reading1.Add("2014-03-04T09:56:48");
-            reading1.Add("0");
-            reading1.Add(".034");
-
-            var reading2 = new List<string>();
-
-
-            //"2014-03-04T09:56:48", "0", ".034"
-            reading2.Add("2014-04-04T09:56:48");
-            reading2.Add("1");
-            reading2.Add(".044");
-
-            var reading3 = new List<string>();
-            reading3.Add("2014-04-04T09:56:48");
-            reading3.Add("2");
-            reading3.Add(".044");
-
-            var allReadings = new List<List<string>>();
-            allReadings.Add(reading1);
-            allReadings.Add(reading2);
-            allReadings.Add(reading3);
-
 
             using (var client = new HttpClient())
             {
@@ -72,13 +47,13 @@ namespace VibrationMachineLearningService.Areas.AzureMachineLearning
                             {
                                 ColumnNames = new string[] {"Date", "Increment", "Velocity"},
 
-                               // Values = new string[,] {  { "2014-03-04T09:56:48", "0", ".034" }, { "2014-03-04T09:57:48", "1", ".035" }, { "2014-03-04T09:58:48", "2", ".15" }, }
+                                //Values = new string[,] {  { "2014-03-04T09:56:48", "0", ".034" }, { "2014-03-04T09:57:48", "1", ".035" }, { "2014-03-04T09:58:48", "2", ".15" }, }
                                 Values = allReadings
                             }
                         },
                     },
                     GlobalParameters = new Dictionary<string, string>() {
-                        { "Relational expression", "\\\"time_increment\" <= 1" },
+                        { "Relational expression", string.Format("\\\"time_increment\" <= {0}", allReadings.Count-2) },
                     }
                 };
                 
