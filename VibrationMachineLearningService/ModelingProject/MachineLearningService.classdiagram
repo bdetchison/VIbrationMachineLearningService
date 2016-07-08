@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="53ec9b56-dd96-4ebf-90d3-0be8c67caba9" name="MachineLearningService" linkedPackageId="4ac19f9b-b5db-482f-9878-1a76be0fefc7" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="6653299b-b106-4fa7-ae17-03aabf8f39f3">
+      <profileInstance Id="22a55cc0-384e-4ddd-870f-1ce172128400" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="15c4a91c-cf6d-42df-94fe-10ae68c75ef1">
+      <profileInstance Id="0dae4eb7-1dea-44a2-97a6-b15e04d178af" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="c5478a7c-d4f5-4c7c-8059-3b4be476f33b" name="ProcessVibrationDataController" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="e18c2ec2-d6ca-41d5-8ffe-85fef7d84287" />
+        <suppliersInternal>
+          <dependency Id="298db6ec-ee44-4a95-9e4c-b4ce4e018bfa">
+            <classMoniker Id="cd1ce47f-24cd-497e-98c9-70b12dab9a91" LastKnownName="DataAccess" />
+            <elementDefinition Id="3ab5b0e9-72df-443f-a6e9-03c11aebe138" />
+          </dependency>
+          <dependency Id="636f47b9-e7dc-4a7d-afe6-10e9a40827e8">
+            <classMoniker Id="4aa630b8-3121-45d9-ba98-2731445e114a" LastKnownName="MainObj" />
+            <elementDefinition Id="936a0c39-7619-4168-ac37-0ad0fbc2f1b3" />
+          </dependency>
+        </suppliersInternal>
+        <targetEnds>
+          <association Id="b9380001-3687-42b8-a9ed-f8098f965d06" isDerived="false" sourceEndRoleName="ProcessVibrationDataController" targetEndRoleName="MachineLearningRequest" isLeaf="false" isAbstract="false">
+            <classMoniker Id="3bcece72-de99-4673-b00c-1e14eeeba793" LastKnownName="MachineLearningRequest" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="587ae62b-1b8e-4dd5-b61d-9596c49a5234" name="ProcessVibrationDataController" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="9c3e74f5-9e0a-434d-923c-7d4f07f97018" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7ca693b8-db7b-4f20-8ab9-f56954e4b865" name="MachineLearningRequest" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="14d799d4-264c-46f4-ab85-6e8db6fd5657" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8d785309-4b98-447c-80ba-12eacfc145d2" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="d6fcd839-885c-4aa0-a4b8-15a66e094e88" name="ProcessVibrationDataController" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="1ed8253e-f63c-44b5-b784-76f3582e3572" />
+          </operation>
+          <operation Id="94752b21-52e9-479a-8d9b-9a88fc0a8b2e" name="Post" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="5dad8329-5743-4e67-920d-ecbeaa994692" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="529ada34-2148-490d-b36d-d6964c602f7e" name="velocity" direction="In" isUnique="false">
+                  <elementDefinition Id="4049da18-c3e3-4eb9-9643-3514f9e43c77" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2b1d61ae-b38e-4a4e-be40-6322a47178e7" name="date" direction="In" isUnique="false">
+                  <elementDefinition Id="ca2ff73c-2e6b-4832-aeed-66408929c840" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="74161e51-1945-4a5d-b524-50b839229887" name="ProcessMachineLearningResult" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="02666fa5-e580-4a0c-adba-07cef9785863" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="cd1ce47f-24cd-497e-98c9-70b12dab9a91" name="DataAccess" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2b1a96da-9330-42be-8a60-554ce31b00c0" />
+        <ownedAttributesInternal>
+          <property Id="47fb795e-ce70-4169-8cdb-64006f19e00c" name="connectionString" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="03baa8a3-446c-42b9-998e-faafc04b8612" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="dc288de8-04fc-4fd0-ac9b-8f0d064cd012" name="DataAccess" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="be793887-4e0e-41ae-86d7-9be3eaa1d9ac" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="022ea04b-39ab-4541-95de-c1a52419e5a9" name="connString" direction="In" isUnique="false">
+                  <elementDefinition Id="6b58fc78-75f7-4b5c-96be-e20ebb3b9817" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="3f045990-1f10-495c-8d97-5ed1deea8c73" name="InsertData" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="2f102c40-2c84-47dd-aca7-50c171988009" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2e93231f-10f6-4ece-84b5-f62caf9d0b7f" name="velocity" direction="In" isUnique="false">
+                  <elementDefinition Id="f1a10671-3b39-400e-ac55-00a84119c28f" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7c9c9aea-58fb-4bb5-bbec-3ea4a49f70c3" name="date" direction="In" isUnique="false">
+                  <elementDefinition Id="fa6ca310-ecaf-48ba-b8aa-ec65f05fd807" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="718ec621-981a-47e8-a706-dd5abfa60770" name="InsertMachineLearningData" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="9a08d6e2-e38a-4691-bdc4-24dd4f54f80c" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="147b6e65-d3ab-421a-bbd7-0dd802db3ba9" name="prediction" direction="In" isUnique="false">
+                  <elementDefinition Id="455d2055-63f0-4d00-9a02-daee2b35dec8" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="26a32623-664f-46a3-8c65-1768babf43e1" name="actual" direction="In" isUnique="false">
+                  <elementDefinition Id="6c7e4959-3d63-4e74-9941-9b8762150bcb" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="5830e90a-00f9-41b4-8d82-3aa088ecbc9c" name="GetAllData" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="fed083d3-03c1-40f6-a994-41117d38adba" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4aa630b8-3121-45d9-ba98-2731445e114a" name="MainObj" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ba4adae5-8a56-4b44-881a-0e155910c087" />
+        <targetEnds>
+          <association Id="fc1a1760-6d20-44a3-805e-7495d111a55f" isDerived="false" sourceEndRoleName="MainObj" targetEndRoleName="Results" isLeaf="false" isAbstract="false">
+            <classMoniker Id="c02d7b02-5935-41c5-8f04-4633b21c433a" LastKnownName="Results" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f7ab729f-3c96-445e-bd64-f972253fb1f2" name="MainObj" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e1bd7867-44a4-4f8f-a642-f13059551dfa" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a8ed3d03-87a7-4035-87be-fcbe17e589b5" name="Results" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="82302781-f97c-4219-9089-ddae3412e8af" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="d0759466-310b-4241-8ca6-dab2e39285c2" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="4cff6a9f-9912-4932-bbde-53076b0dc662" name="Results" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4e397dfc-6c05-4774-bd94-8dd8ef00d3c7" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="3bcece72-de99-4673-b00c-1e14eeeba793" name="MachineLearningRequest" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="91a9103d-5953-4bd9-a00d-750f3efce4d4" />
+        <targetEnds>
+          <association Id="fa168ff7-7cdd-4525-94b8-8a08edebd23f" isDerived="false" sourceEndRoleName="MachineLearningRequest" targetEndRoleName="StringTable" isLeaf="false" isAbstract="false">
+            <classMoniker Id="882cde03-803b-4863-afd8-d0860c9b6696" LastKnownName="StringTable" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ad0db8b3-a3d5-44bf-a426-b9ef327d0249" name="MachineLearningRequest" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="7049e67c-6c8a-40b1-a79c-3966e6c7a109" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c92bd0ce-d00c-4d3c-b214-30f9b222bb3c" name="StringTable" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="35ef9789-ac12-4615-a3a3-e79b60440e22" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="03663f99-fc8a-4b57-8199-70d7fb48f0c7" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="09261972-6e63-424b-8a77-dc5541048da7" name="InvokeRequestResponseService" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="052272f7-f387-4525-b970-5feb0afd66cd" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e3f71d14-782f-4301-bd8a-0b9725cbd378" name="responseAction" direction="In" isUnique="false">
+                  <elementDefinition Id="11ec7f97-e881-4958-b5f9-7c7e4693afcf" />
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="ba83b51c-5f89-4ab0-9cb6-fa55e30b702b" name="velocityReadings" direction="In" isUnique="false">
+                  <elementDefinition Id="d100dfa3-9a80-48a1-89e7-6ff78b42f502" />
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="882cde03-803b-4863-afd8-d0860c9b6696" name="StringTable" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0d17f5ee-bebe-4416-bbed-208ed0940fe2" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="c02d7b02-5935-41c5-8f04-4633b21c433a" name="Results" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="168c011a-5037-4eeb-b595-bd2e98630b52" />
+        <targetEnds>
+          <association Id="c23c6b89-d914-4d2b-810f-1bdf79873b19" isDerived="false" sourceEndRoleName="Results" targetEndRoleName="output1" isLeaf="false" isAbstract="false">
+            <classMoniker Id="e5851a87-4b61-4435-a23c-468394ba2e85" LastKnownName="output1" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c37d1fea-111d-4403-8e38-adea5232b48f" name="Results" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="191ef1f2-edea-42d8-9eac-28c1d315f856" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="955fc6ae-1426-49e5-90bd-312f5be95339" name="output1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="e9cfc289-d2a7-4fd2-bf14-073509e4a16d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a3824006-5d10-4a11-8628-dce7237f8790" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="ccca80fa-1c77-4f9c-a01f-e66da2d6aa61" name="output1" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d3cce74d-fbda-412a-8c6e-e624a6106fc4" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e5851a87-4b61-4435-a23c-468394ba2e85" name="output1" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="857d32d4-4892-48e1-b998-4e2ba9b5ceb7" />
+        <targetEnds>
+          <association Id="4d82c63d-c8e4-490c-b616-3cd0a4f0ca01" isDerived="false" sourceEndRoleName="output1" targetEndRoleName="value" isLeaf="false" isAbstract="false">
+            <classMoniker Id="dd5bb4f4-89a7-469c-96ab-e6b12aa50958" LastKnownName="value" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e4b1bfff-3622-4130-b592-47f6e0618104" name="output1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d50a989b-a2bf-492d-ad59-d3af2feea071" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9d95ccb1-bb43-4075-af6c-a8710edd6c09" name="value" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="27da108f-7f48-4610-bab9-bf576cdcbe17" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6d31c4ef-604a-4362-84a3-d21de4d0d1dd" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="2d080d0d-c1c5-413e-bd0f-c53cde68e9c6" name="type" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="16bdf1ed-e16d-4d71-bfe8-9e8769a53c37" />
+          </property>
+          <property Id="23b08f70-8c8a-45ff-a2a3-53a48308c54e" name="value" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8eb69cb6-7652-4019-beca-07f03f13895b" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="dd5bb4f4-89a7-469c-96ab-e6b12aa50958" name="value" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f59f1ede-5665-4598-9639-d6b1b8f4b143" />
+        <ownedAttributesInternal>
+          <property Id="2cb781b7-ec9f-48bc-8ab7-0122b7db81b1" name="ColumnNames" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b74d0e38-f4be-409a-ae48-01641f7b5066" />
+          </property>
+          <property Id="4194143d-1ffb-4ecc-bc12-3e0cc38718ea" name="ColumnTypes" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a64a9199-b14d-47a3-a294-424e28214fed" />
+          </property>
+          <property Id="d64da418-3032-4e3f-af29-9f0527aed27a" name="Values" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="003dc271-e8db-49dc-9277-d0b44285cf66" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="4ac19f9b-b5db-482f-9878-1a76be0fefc7" name="ModelingProject">
+    <elementDefinition Id="7d37b6e0-d026-4a2e-81d0-b8c07f678473" />
+  </package>
+</logicalClassDesignerModel>
