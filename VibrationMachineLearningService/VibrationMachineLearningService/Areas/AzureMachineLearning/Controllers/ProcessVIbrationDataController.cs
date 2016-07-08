@@ -83,6 +83,7 @@ namespace VibrationMachineLearningService.Areas.AzureMachineLearning.Controllers
                 
 
                 if ( predictedValue> lastDataReading + .1 
+                    || predictedValue < lastDataReading -.1
                     || predictedValue == 0)//0 is listed if there is an outlier
                 {
                     //failure coming
