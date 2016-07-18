@@ -82,8 +82,8 @@ namespace VibrationMachineLearningService.Areas.AzureMachineLearning.Controllers
                 dataAccess.InsertMachineLearningData(predictedValue, lastDataReading);
                 
 
-                if ( predictedValue> lastDataReading + .1 
-                    || predictedValue < lastDataReading -.1
+                if ( predictedValue> lastDataReading + .01 
+                    || predictedValue < lastDataReading -.01
                     || predictedValue == 0)//0 is listed if there is an outlier
                 {
                     //failure coming
