@@ -80,14 +80,14 @@ namespace VibrationMachineLearningService.Areas.AzureMachineLearning.Controllers
                 var predictedValue = responseObject.Results.output1.value.Values.First()[1];
 
                 dataAccess.InsertMachineLearningData(predictedValue, lastDataReading);
-                
 
-                if ( predictedValue> lastDataReading + .01 
-                    || predictedValue < lastDataReading -.01
+
+                if (predictedValue + .01 < lastDataReading
+                    || predictedValue - .01 > lastDataReading
                     || predictedValue == 0)//0 is listed if there is an outlier
                 {
                     //failure coming
-                    SendPushNotification(string.Format("Failure Predicted:  Current actual reading:  {0}",lastDataReading));
+                    SendPushNotification(string.Format("Failure Predicted:  Current actual reading:  {0}", lastDataReading));
                 }
             }
         }
